@@ -51,6 +51,11 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 </script>
 <!--End of Zendesk Chat Script-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<!-- Fancy-Box -->
+<script type="text/javascript" src="fancyBox/lib/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css" media="screen" />
+
 <script type="text/javascript">
 		$(document).ready(function() {
 			/*
@@ -62,6 +67,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
          padding: 0
     }
       );
+
+
 
 			/*
 			 *  Different effects
@@ -231,7 +238,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 		});
 	</script>
-
+<!-- Fancy-Box-End -->
 </head>
 
 <body class="home-page">
@@ -286,7 +293,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     <h2 class="title">The #1 Platform for Manufacturer Reps</h2>
     <h4 class="intro">Easy to use sales platform for managing all your lines in the cloud</h4>
     <div class="col-md-6">
-      <p><a class="fancybox-effects-d fancybox.iframe btn btn-cta btn-cta-primary col-right"  href="assets/Videos/Repbox-video.mp4" title="Video">Watch Video </a></p>
+      <p><a class="fancybox fancybox.iframe btn btn-cta btn-cta-primary col-right" href="assets/Videos/Repbox-video.mp4" title="Video">Watch Video </a></p>
     </div>
     <div class="col-md-6">
       <p style="margin:0 auto"><a class="btn btn-cta btn-cta-primary col-left" href="signup.html">Try for Free</a></p>
@@ -666,32 +673,12 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
   <!--//footer-content-->
 
 
-<!-- Video Modal -->
-<div class="modal modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 id="videoModalLabel" class="modal-title sr-only">Video Tour</h4>
-      </div>
-      <div class="modal-body">
-        <div class="video-container">
-          <iframe id="vimeo-video" src="http://player.vimeo.com/video/28872840?color=ffffff&amp;wmode=transparent" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-        <!--//video-container-->
-      </div>
-      <!--//modal-body-->
-    </div>
-    <!--//modal-content-->
-  </div>
-  <!--//modal-dialog-->
-</div>
-<!--//modal-->
+
 
 <!-- Javascript -->
 <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
-<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
 <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
