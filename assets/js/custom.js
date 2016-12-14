@@ -1,6 +1,26 @@
 jQuery(document).ready(function(){
 
-	jQuery('.fancybox').fancybox();
+	$('.fancybox').fancybox({
+			helpers: {
+				media: true,
+				title: null,
+			},
+		 	fitToView: true,
+		 	aspectRatio: true,
+
+		 autoScale: true,
+		 autoDimensions: true,
+		 autoSize: true,
+		 maxWidth: "70%",
+		 maxHeight: "70%",
+
+		 afterLoad: function() {
+			 console.log('afterload');
+
+			 this.width = 1280;
+			 this.height = 720;
+		 }
+	 });
 
 	jQuery("#signup").validate({
 		rules: {
@@ -34,22 +54,22 @@ jQuery(document).ready(function(){
 	        }
 	    }
     });
-	
+
 	jQuery("#signup_form").on("click", function(e){
-		
+
 		jQuery("#Error").hide();
 		jQuery("#Success").hide();
-		
+
 		e.preventDefault();
 
 		var is_available = false;
-		
+
 		if(jQuery("#signup").valid()){
 
 			var domain = jQuery("#domain").val();
-			
+
 			run_waitMe($('.fancybox-skin'), 1, "orbit");
-			
+
 			check_domain_availability(domain).then(
 				function(data){
 					if(data.SUCCESS == 'TRUE'){
@@ -70,7 +90,7 @@ jQuery(document).ready(function(){
 						else{
 							jQuery("#domain").next("label").css("display", "inline-block").text("Company Name already exists");
 						}
-					
+
 					}
 				}
 			);
@@ -79,36 +99,16 @@ jQuery(document).ready(function(){
 });
 
 function check_domain_availability(domain){
-	
+
 	var aDeferred = jQuery.Deferred();
-		
+
 	var is_avail = false;
-	
+
 	var postData = {
 		action: 'check_domain_availability',
         domain: domain
     }
-	
-	jQuery.ajax({
-        type:'POST',
-        url : "php/Signup.php",
-        data: postData,
-        dataType:'json',
-		async:false,
-		success: function(data){
-			aDeferred.resolve(data);
-		}
-	});	
-	return aDeferred.promise();
-}
 
-function submitSignupForm(){
-	var aDeferred = jQuery.Deferred();
-	
-	var formData = jQuery("#signup").serialize();
-		
-	var postData = "action=saveFormData&"+formData;
-    
 	jQuery.ajax({
         type:'POST',
         url : "php/Signup.php",
@@ -119,19 +119,39 @@ function submitSignupForm(){
 			aDeferred.resolve(data);
 		}
 	});
-	
+	return aDeferred.promise();
+}
+
+function submitSignupForm(){
+	var aDeferred = jQuery.Deferred();
+
+	var formData = jQuery("#signup").serialize();
+
+	var postData = "action=saveFormData&"+formData;
+
+	jQuery.ajax({
+        type:'POST',
+        url : "php/Signup.php",
+        data: postData,
+        dataType:'json',
+		async:false,
+		success: function(data){
+			aDeferred.resolve(data);
+		}
+	});
+
 	return aDeferred.promise();
 }
 
 function onSuccess(googleUser) {
-	
+
 	if($("#is_page_loaded").val() == 1){
 		var user_id = googleUser.getBasicProfile().getId();
 		var email = googleUser.getBasicProfile().getEmail();
-		
+
 		var last_name = googleUser.getBasicProfile().getFamilyName();
 		var first_name = googleUser.getBasicProfile().getName();
-		
+
 		run_waitMe($('.fancybox-skin'), 1, "orbit");
 
 		$.ajax({
@@ -139,10 +159,10 @@ function onSuccess(googleUser) {
 			url: "php/subscribe.php",
 			data: "user_id="+user_id+"&email="+email+"&last_name="+last_name+"&first_name="+first_name,
 			success: function(data) {
-				
+
 				$('.fancybox-skin').waitMe('hide');
 				data = JSON.parse(data);
-				
+
 				if(data.success){
 					$('#Success').text("Thank you for Sign up. Please check your email.");
 					$("#Success").show();
