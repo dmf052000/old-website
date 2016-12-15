@@ -84,6 +84,8 @@
 	background-image: url(fancybox_sprite.png);
 }
 
+
+
 #fancybox-loading {
 	position: fixed;
 	top: 50%;
@@ -100,6 +102,11 @@
 	width: 44px;
 	height: 44px;
 	background: url(fancybox_loading.gif) center center no-repeat;
+}
+
+.myClose {
+	background-image: url(button_close.png);
+	font-weight: 200;
 }
 
 .fancybox-close {
