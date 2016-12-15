@@ -1,26 +1,27 @@
 jQuery(document).ready(function(){
 
 	$('.fancybox').fancybox({
-			helpers: {
-				media: true,
-				title: null,
-			},
-		 	fitToView: true,
-		 	aspectRatio: true,
+	    helpers: {
+	      media: true,
+	      title: null,
+	    },
+	    fitToView: true,
+	    aspectRatio: true,
 
-		 autoScale: true,
-		 autoDimensions: true,
-		 autoSize: true,
-		 maxWidth: "70%",
-		 maxHeight: "70%",
+	   autoScale: true,
+	   autoDimensions: true,
+	   autoSize: true,
+	   maxWidth: "70%",
+	   maxHeight: "70%",
 
-		 afterLoad: function() {
-			 console.log('afterload');
+	   afterLoad: function() {
+	     console.log('afterload');
 
-			 this.width = 1280;
-			 this.height = 720;
-		 }
+	     this.width = 1280;
+	     this.height = 720;
+	   }
 	 });
+
 
 	jQuery("#signup").validate({
 		rules: {

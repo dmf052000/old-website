@@ -48,8 +48,8 @@
 			return getScalar(value, dim) + 'px';
 		};
 
-	$.extend(F, {
-		// The current version of fancyBox
+//	$.extend(F, {
+		 The current version of fancyBox
 		version: '2.1.5',
 
 		defaults: {
