@@ -1,6 +1,8 @@
 jQuery(document).ready(function(){
 
-	$('.fancybox').fancybox({
+// fancybox custom script. This is in another folder already.
+
+	/*$('.fancybox').fancybox({
 	    helpers: {
 	      media: true,
 	      title: null,
@@ -11,8 +13,8 @@ jQuery(document).ready(function(){
 	   autoScale: true,
 	   autoDimensions: true,
 	   autoSize: true,
-	   maxWidth: "70%",
-	   maxHeight: "70%",
+	   maxWidth: "100%",
+	   maxHeight: "100%",
 
 	   afterLoad: function() {
 	     console.log('afterload');
@@ -21,6 +23,8 @@ jQuery(document).ready(function(){
 	     this.height = 720;
 	   }
 	 });
+
+	 */
 
 
 	jQuery("#signup").validate({
