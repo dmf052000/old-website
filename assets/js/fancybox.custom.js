@@ -15,8 +15,8 @@ $(document).ready(function() {
  	   autoScale: true,
  	   autoDimensions: true,
  	   autoSize: false,
- 	   maxWidth: "60%",
- 	   maxHeight: "60%",
+ 	   maxWidth: "70%",
+ 	   maxHeight: "70%",
 
  	   afterLoad: function() {
  	     console.log('afterload');
