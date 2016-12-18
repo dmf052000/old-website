@@ -4931,10 +4931,12 @@ h3 {
 }
 
 .promo11 {
-    color: #fff;
+    color: #2c3e50;
     margin-bottom: 80px;
     position: relative;
     z-index: 10;
+    background-color: #F8F9F9;
+
 }
 
 .promo11 {
@@ -4943,7 +4945,7 @@ h3 {
 }
 
 .promo11 h2 {
-    text-align: left;
+    text-align: center;
     font-size: 42px;
     font-weight: bold;
     padding-bottom: 25px;
@@ -4979,6 +4981,8 @@ h3 {
 .well1 label {
     font-weight: 400;
     font-size: 13px;
+    color: #2c3e50;
+    font-weight: 500;
 }
 
 .radio {
@@ -5002,6 +5006,19 @@ h3 {
     color: #ffffff;
     position: relative;
     top: -25px;
+}
+
+.btn-warning:hover {
+    background-color: #0e8cd1 !important;
+    border-bottom-color: #0e8cd1 !important;
+    border-left-color: #0e8cd1 !important;
+    border-right-color: #0e8cd1 !important;
+    border-top-color: #0e8cd1 !important;
+    color: #ffffff;
+    position: relative;
+    top: -25px;
+    
+
 }
 
 #success_message {
