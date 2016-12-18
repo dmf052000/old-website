@@ -326,12 +326,12 @@ input[type="text"], input[type="email"], input[type="password"], input[type="sub
 }
 
 .header .main-nav .navbar-toggle .icon-bar {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 1);
     height: 3px;
 }
 
 .header .main-nav .navbar-toggle:hover .icon-bar {
-    background-color: #fff;
+    background-color: #333;
 }
 
 .header .main-nav .nav .nav-item {
@@ -520,7 +520,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="sub
 }
 
 .bg-slider-wrapper .flexslider .slide.slide-3 {
-    background: #253340 url('../images/background/bg-header-3.jpg') no-repeat 50% top;
+    background: #253340 url('../images/background/bg-header-31') no-repeat 50% top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -4927,11 +4927,11 @@ h3 {
     top: 0px;
     width: 100%;
     background-size: cover;
-    background-image: url(../images/background/23_Form_Contact_0.jpg);
+    background-image: url(../images/background/ny.png);
 }
 
 .promo11 {
-    color: #333;
+    color: #fff;
     margin-bottom: 80px;
     position: relative;
     z-index: 10;
